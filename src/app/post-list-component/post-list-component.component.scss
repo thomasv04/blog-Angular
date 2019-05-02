@@ -1,0 +1,68 @@
+h1,h3, h4{
+    margin:0;
+     padding:0
+}
+
+.header-post{
+    display:flex;
+    justify-content: space-between;
+    align-content:flex-start;
+    align-items: flex-start;
+
+    h1{
+        max-width: 50%;
+        font-size: 2em;
+    }
+}
+
+h3{
+    font-style: italic;
+    color: rgb(121, 121, 121);
+}
+
+p{
+    text-align: justify;
+    margin-top:10px;
+}
+
+.post{
+    position: relative;
+}
+
+.score{
+    position: absolute;
+    bottom:0;
+    right:0;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding:5px;
+
+    .thumbs{
+        display: block;
+        width: 20px;
+        height: 20px;
+    
+        &.negatif{
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+    }
+
+    .scoreNumber{
+        padding:2px;
+        margin-left:5px;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+

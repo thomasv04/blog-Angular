@@ -1,0 +1,18 @@
+<li [ngClass]="{'list-group-item':true,
+ 'list-group-item-success':postLoveIts > 0,
+ 
+ 'list-group-item-danger':postLoveIts < 0
+}" class="post">
+  <div class="header-post">
+    <h1><strong>{{postTitle}}</strong></h1>
+    <h3>{{postDate | date : 'dd/LL/yy, HH:mm'}}</h3>
+  </div>
+  <p>{{postContent}}</p>
+  <button class="btn btn-success" style="margin-right:10px" (click)="onClickLove('love')">Love It !</button>
+  <button class="btn btn-danger btn-space" (click)="onClickLove('dontlove')">Don't Love It !</button>
+  <div class="score">
+    <img [ngClass]="{'positif':postLoveIts >= 0,
+                    'negatif':postLoveIts < 0}" src="../assets/thumbs-up-hand-symbol.png" alt="" class="thumbs">
+    <h4 class="scoreNumber">{{postLoveIts}}</h4>
+  </div>
+</li>
