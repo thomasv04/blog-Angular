@@ -7,24 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostListComponentComponent implements OnInit {
 
-  @Input() postTitle: string;
-  @Input() postContent : string;
-  @Input() postDate : Date;
-  @Input() postLoveIts : number;
-  @Input() postDontLoveIts : number;
-
-  onClickLove(love){
-    if(love === 'love'){
-      this.postLoveIts++;
-    }else if(love === 'dontlove'){
-      this.postLoveIts--;
-    }
-  }
-
-
-  getDate(){
-    return Date()
-  }
+  @Input() posts: [];
 
   constructor() { }
 
